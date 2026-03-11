@@ -14,8 +14,8 @@ A Figma plugin that automatically generates SwiftUI code from your Figma designs
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/)
 - [Figma Desktop App](https://www.figma.com/downloads/)
+- [Node.js](https://nodejs.org/) (only needed for development)
 
 ### Setup
 
