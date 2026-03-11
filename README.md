@@ -19,26 +19,31 @@ A Figma plugin that automatically generates SwiftUI code from your Figma designs
 
 ### Setup
 
-```bash
-git clone https://github.com/onin-engineering/figma-swiftui-code-exporter-plugin.git
-cd figma-swiftui-code-exporter-plugin
-npm install
-npm run build
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/onin-engineering/figma-swiftui-code-exporter-plugin.git
+   ```
+
+The plugin comes pre-built in the `lib/` directory, so no build step is required.
 
 ### Loading in Figma
 
 1. Open the Figma desktop app
-2. Go to **Plugins** > **Development** > **Import plugin from manifest...**
-3. Select the `manifest.json` file from this repo
+2. Right-click on the canvas and go to **Plugins** > **Development** > **Import plugin from manifest...**
+3. Navigate to the cloned repository and select the `manifest.json` file
+4. The plugin will now appear under **Plugins** > **Development** > **SwiftUI Code Exporter**
 
 ### Development
 
-To rebuild automatically on changes:
+To make changes to the plugin source code:
 
 ```bash
-npm run dev:watch
+npm install
+npm run build          # one-time build
+npm run dev:watch      # or rebuild automatically on changes
 ```
+
+Before merging changes to main, make sure to run `npm run build` so the `lib/` directory stays up to date.
 
 ## License
 
