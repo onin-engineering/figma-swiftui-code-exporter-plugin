@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: var(--figma-color-text, #333);
+  background-color: var(--figma-color-bg, #fff);
+}
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+}
+
+.nonDisplayedTextArea {
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
+}
+
+.codeWrapper {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}
+
+.generatedCode {
+  font-family: ".SF NS Mono", SFMono-Regular, ui-monospace, Menlo, Monaco, monospace, "SF Pro", system-ui;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--figma-color-text, #333);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+  border-top: 1px solid var(--figma-color-border, #e5e5e5);
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: var(--figma-color-bg-brand, #0d99ff);
+  color: #fff;
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 16px;
+}
+
+.copyButton:hover {
+  background-color: var(--figma-color-bg-brand-hover, #0b87e0);
+}
+
+.copyButton:active {
+  background-color: var(--figma-color-bg-brand-pressed, #0a75c2);
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--figma-color-text-secondary, #999);
+  font-size: 11px;
+}
